@@ -1,7 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://kab26ilild5o"]
+[gd_scene load_steps=3 format=3 uid="uid://cod4i3mpaykji"]
 
-[ext_resource type="Script" path="res://processing.gd" id="1_o6hfw"]
+[ext_resource type="PackedScene" uid="uid://b0y6h1xjdbbeh" path="res://player.tscn" id="1_ic2jj"]
 
-[node name="Processing" type="Node2D"]
+[sub_resource type="GDScript" id="GDScript_0um53"]
+
+[node name="Main_Level" type="Node2D"]
 position = Vector2(0, -1)
-script = ExtResource("1_o6hfw")
+script = SubResource("GDScript_0um53")
+
+[node name="Player" parent="." instance=ExtResource("1_ic2jj")]
